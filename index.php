@@ -1,16 +1,17 @@
 <?php
-
+//using libary simple dom
 require 'simple_html_dom.php';
-
+// getting the urls starting with b for now
 $html = file_get_html('http://www.irishindex.com/b/');
 
-$first=array();
 
+//looping through the table on irishindex.com/b and pulling out all the A tags
   foreach ( $html->find('table td a') as $a){
     echo $a."\r\n";
   }
+  //stripping the link so I can put it into the google api call
 $linkStrip = strip_tags($a);
-
+// adding back http:// to fix strange error
 $inputLink =  "http://".$linkStrip;
 
 $curl = curl_init();
