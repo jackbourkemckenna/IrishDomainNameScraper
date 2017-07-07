@@ -54,3 +54,7 @@ if ($err) {
    }
 
 }
+/*
+TO DO:
+Need to figure out how to add my array list to the api call. All it does atm is get the last item in the array.
+*/ 

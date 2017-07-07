@@ -1,4 +1,6 @@
 <?php
+
+// This is a test file for loop testing 
 session_start();
 require 'simple_html_dom.php';
 
